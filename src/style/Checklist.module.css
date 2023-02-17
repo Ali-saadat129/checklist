@@ -1,0 +1,14 @@
+.container {
+    width: 22%;
+    height: 75%;
+    border: 3px solid #E7E9EB;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    /* box-shadow: 7px 3px 3px 3px rgba(0, 0, 0, 0.6); */
+    position: absolute;
+    padding: 5px 5px;
+    box-sizing: border-box;
+}

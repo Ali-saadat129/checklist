@@ -1,0 +1,23 @@
+.plan {
+    display: flex;
+    direction: rtl;
+    background-color: #e2e4e4;
+    color: #000000;
+    padding: 4px 4px;
+    margin: 0;
+    box-sizing: border-box;
+    margin: 5px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+
+}
+.text {
+    margin: 0;
+}
+.plan div  .Trash , .plan div  .Edit{
+    width: 14px;
+    height: 14px;
+}

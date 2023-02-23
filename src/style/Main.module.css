@@ -1,5 +1,18 @@
+.Setting {
+    display: none;
+    position: absolute;
+    /* transform: translateX(-120%);
+    -webkit-transform: translateX(-120%);
+    -moz-transform: translateX(-120%);
+    -ms-transform: translateX(-120%);
+    -o-transform: translateX(-120%); */
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    
+}
+
 .container{
-    /* position: relative; */
     width: 100%;
     height: 100%;
 }
@@ -11,6 +24,7 @@
     flex-direction: row;
     height: 30%;
 }
+
 .threeline {
     width: 2.5vw;
     height: 2.5vw;
@@ -25,28 +39,29 @@
     -o-border-radius: 8px;
 }
 .Tea {
-    width: 7vw;
-    height: 7vw;
+    width: 5.5vw;
+    height: 5.5vw;
     position: absolute;
     top: 5vh;
 }
 .header h3{
     display: block;
     position: absolute;
-    top: 17vh;
-    font-size: 1.2rem ;
+    top: 15.5vh;
+    font-size: 1vw;
 }
 .container .inputParent{
     display: flex; 
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     padding: 10px 0;
     box-sizing: border-box;
 }
-.container input {
+.container .inputParent input {
     position: absolute;
-    width: 90%;
+    width: 75%;
     bottom: 0;
+    right: 10px;
     outline: 0.4px solid #598ffa;
     border: 1px solid #c7c9c9;
     border-radius: 10px;
@@ -65,13 +80,52 @@
     justify-content: center;
     color: #c7c9c9;
 }
-.container .titletask {
+/* .container .titletask {
     font-size: 0.8rem;
     width: 100%;
-
+    padding: 0;
+}
+.container .titletask  p {
+    padding: 0;
+    margin: 0;
 }
 .container .title {
-    padding: 10px;
+    padding: 0;
     display: flex;
     direction: rtl;
+    margin: 0;
+    box-sizing: border-box;
+}
+ */
+
+.planParent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 90%;
+    height: 50%;
+    overflow: auto;
+}
+
+.container .inputParent button {
+    position: absolute;
+    bottom: 11px;
+    left: 0.65rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    padding: 8px 7px;
+}
+.Setting , .header , .inputParent , .planParent {
+    transition: all 0.5 ease-in-out;
+    -webkit-transition: all 0.5 ease-in-out;
+    -moz-transition: all 0.5 ease-in-out;
+    -ms-transition: all 0.5 ease-in-out;
+    -o-transition: all 0.5 ease-in-out;
 }

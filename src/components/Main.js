@@ -29,9 +29,21 @@ const Main = () => {
 
 // add temperary state to totall state
     const AddPlan = () => {
+        const inputbutton = document.getElementById("inputbutton")
         if(tempState.length){
-            setplan(() => [...planstate, tempState ])
-            setTemp("")
+            if(inputbutton.attributes.whatdo.value=="ADD"){
+                setplan(() => [...planstate, tempState ])
+                setTemp("")
+            }
+            if(inputbutton.attributes.whatdo.value=="EDIT"){
+                const newplan = planstate
+                const indexof = inputbutton.attributes.indexof.value
+                newplan[indexof]=tempState
+                console.log(newplan)
+                setplan(newplan)
+                setTemp("")
+                inputbutton.setAttribute("whatdo","ADD")
+            }
         }
     }
 // show Setting page
@@ -76,10 +88,11 @@ const RemovePlan = (event) => {
 const EditPlan = (event) => {
     const input =document.getElementById("input");
     input.value = event
-    const targetIndex = planstate.findIndex((element) => element===event)
+    const inputbutton = document.getElementById("inputbutton")
     const newplan = planstate
-  
-    setplan(newplan)
+    const targetIndex = newplan.findIndex((element) => element===event)
+    inputbutton.setAttribute("whatdo","EDIT")
+    inputbutton.setAttribute("indexof",`${targetIndex}`)
 }
     
     return (
@@ -100,7 +113,7 @@ const EditPlan = (event) => {
 
             <div id='inputParent' className={Styles.inputParent}>
                 <input value={tempState} onChange={inputHandler} id='input' placeholder=" add your plan"></input>   
-                <button onClick={AddPlan} > Add</button>
+                <button whatdo='ADD' indexof='0' onClick={AddPlan} id='inputbutton' > Add</button>
             </div>
 
 

@@ -1,5 +1,6 @@
 .plan {
     display: flex;
+    justify-content: space-between;
     direction: rtl;
     background-color: #e2e4e4;
     color: #000000;
@@ -12,12 +13,71 @@
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
+    word-wrap: break-word;
 
 }
 .text {
     margin: 0;
+    word-wrap: break-word;
+
 }
 .plan div  .Trash , .plan div  .Edit{
-    width: 14px;
-    height: 14px;
+    width: 1.2rem;
+    height: 1.2rem;
+}
+.plan div  .Trash {
+    width: 1.3rem;
+    height: 1.3rem;   
+}
+
+
+/*  -------- responsive ----------------- */
+@media only screen and (max-width: 768px) {
+    .plan .text {
+        font-size: 1.6rem;
+    }
+    .plan div  .Edit{
+        width: 2rem;
+        height: 2rem;
+    }
+    .plan div  .Trash {
+        width: 2rem;
+        height: 2rem; 
+    }
+    
+
+}
+@media only screen and (min-width: 768px) {
+    .plan .text {
+        font-size: 2.4rem;
+        margin: 10px 10px ;
+    }
+    .plan div  .Edit{
+        width: 2.8rem;
+        height: 2.8rem;
+    }
+    .plan div  .Trash {
+        width: 2.9rem;
+        height: 2.9rem; 
+    }
+    
+}
+@media only screen and (min-width: 1024px) {
+    .plan .text {
+        font-size: 2rem;
+        margin: 10px 10px ;
+    }
+    .plan div {
+        display: flex;
+        
+    }
+    .plan div  .Edit{
+        width: 2.2rem;
+        height: 2.2rem;
+    }
+    .plan div  .Trash {
+        width: 2.4rem;
+        height: 2.4rem; 
+    }
+    
 }

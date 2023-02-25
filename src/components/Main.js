@@ -18,6 +18,7 @@ import Setting from './Setting';
 
 
 const Main = () => {
+    console.log(window.innerWidth)
 // states 
     const [planstate,setplan] = useState(["این متن برای تست است "])
     const[tempState,setTemp] = useState("")

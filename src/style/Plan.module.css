@@ -21,6 +21,9 @@
     word-wrap: break-word;
 
 }
+.plan div {
+    align-items: center;
+}
 .plan div  .Trash , .plan div  .Edit{
     width: 1.2rem;
     height: 1.2rem;
@@ -34,37 +37,37 @@
 /*  -------- responsive ----------------- */
 @media only screen and (max-width: 768px) {
     .plan .text {
-        font-size: 1.6rem;
+        font-size: 1rem;
     }
     .plan div  .Edit{
-        width: 2rem;
-        height: 2rem;
+        width: 1.1rem;
+        height: 1.1rem;
     }
     .plan div  .Trash {
-        width: 2rem;
-        height: 2rem; 
+        width: 1.1rem;
+        height: 1.1rem; 
     }
     
 
 }
 @media only screen and (min-width: 768px) {
     .plan .text {
-        font-size: 2.4rem;
+        font-size: 1.1rem;
         margin: 10px 10px ;
     }
     .plan div  .Edit{
-        width: 2.8rem;
-        height: 2.8rem;
+        width: 1.4rem;
+        height: 1.4rem;
     }
     .plan div  .Trash {
-        width: 2.9rem;
-        height: 2.9rem; 
+        width: 1.4rem;
+        height: 1.4rem; 
     }
     
 }
 @media only screen and (min-width: 1024px) {
     .plan .text {
-        font-size: 2rem;
+        font-size: 1.2rem;
         margin: 10px 10px ;
     }
     .plan div {
@@ -72,12 +75,33 @@
         
     }
     .plan div  .Edit{
-        width: 2.2rem;
-        height: 2.2rem;
+        width: 1.5rem;
+        height: 1.5rem;
     }
     .plan div  .Trash {
-        width: 2.4rem;
-        height: 2.4rem; 
+        width: 1.6rem;
+        height: 1.6rem; 
     }
     
 }
+
+@media only screen and (min-width: 1250px) {
+    .plan .text {
+        font-size: 1rem;
+        margin: 10px 10px ;
+    }
+    .plan div {
+        display: flex;
+        align-items: center;
+    }
+    .plan div  .Edit{
+        width: 1.3rem;
+        height: 1.3rem;
+    }
+    .plan div  .Trash {
+        width: 1.3rem;
+        height: 1.3rem; 
+    }
+    
+}
+

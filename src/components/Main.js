@@ -21,7 +21,7 @@ const Main = () => {
     console.log(window.innerWidth)
 // states 
     const [planstate,setplan] = useState(["این متن برای تست است "])
-    const[tempState,setTemp] = useState("")
+    const [tempState,setTemp] = useState("")
 // ------------------------- functions ----------------------
 // set value of temperary state from input
     const inputHandler = (event) => {
@@ -100,7 +100,7 @@ const EditPlan = (event) => {
 
         <div className={Styles.container}>
             <div id='setting' className={Styles.Setting}>
-                <Setting close={setClose} />
+                <Setting all={planstate.length} close={setClose} />
             </div>
             <div id='header' className={Styles.header}>
                 <img onClick={settingHandler}  className={Styles.threeline} src={line}></img>

@@ -1,4 +1,6 @@
 .container {
+    margin: 0 !important;
+    padding: 0 !important;
     width: 19%;
     height: 75%;
     border: 3px solid #E7E9EB;
@@ -16,8 +18,10 @@
 /* -------------- responsive ------------------ */
 @media only screen and (max-width: 768px) {
     .container{
-        width: 100%;
-        height: 100%;
+        width: 90%;
+        height: 90%;
+        margin: 0 !important;
+        padding: 0 !important;
     }
 }
 @media only screen and (min-width: 768px) {

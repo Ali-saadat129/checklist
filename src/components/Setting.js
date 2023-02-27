@@ -9,7 +9,7 @@ import Styles from "../style/Setting.module.css"
 // close setting page function 
 
 
-const Setting = ({doCount , all ,close}) => {
+const Setting = ({ all ,close}) => {
     return (
         <div >
             <div className={Styles.container}>
@@ -35,11 +35,11 @@ const Setting = ({doCount , all ,close}) => {
                     <h3>وضعیت</h3>
                     <div className={Styles.countparent}>
                         <div >
-                            <p className={Styles.Statistics} >{all}1</p>
+                            <p className={Styles.Statistics} >{all}</p>
                             <p className={Styles.count}>برنامه های امروز</p>
                         </div>
                         <div>
-                            <p className={Styles.Statistics}>2{doCount}</p>
+                            <p className={Styles.Statistics}>0</p>
                             <p className={Styles.count}> انجام شده </p>
                         </div>
                     </div>

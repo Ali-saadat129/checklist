@@ -18,10 +18,10 @@ import Setting from './Setting';
 
 
 const Main = () => {
-    console.log(window.innerWidth)
 // states 
-    const [planstate,setplan] = useState(["این متن برای تست است "])
-    const [tempState,setTemp] = useState("")
+    const [planstate,setplan] = useState(["این متن برای تست است "]);
+    const [tempState,setTemp] = useState("");
+    const [planDo,setplando] =useState([])
 // ------------------------- functions ----------------------
 // set value of temperary state from input
     const inputHandler = (event) => {
@@ -95,12 +95,27 @@ const EditPlan = (event) => {
     inputbutton.setAttribute("whatdo","EDIT")
     inputbutton.setAttribute("indexof",`${targetIndex}`)
 }
+// function for checkbox 
+const checkplan = (value) => {
+    if(value==="DO"){
+        const newplanlist = planDo
+        newplanlist.push(value)
+        setplando(newplanlist)
+        console.log(planDo)
+    }
+    if(value==="notDO"){
+        const newplanlist = planDo
+        newplanlist.splice(value,1)
+        setplando(newplanlist)
+        console.log(planDo)
+    }
+}
     
     return (
 
         <div className={Styles.container}>
             <div id='setting' className={Styles.Setting}>
-                <Setting all={planstate.length} close={setClose} />
+                <Setting all={planstate.length} plando={planDo.length} close={setClose} />
             </div>
             <div id='header' className={Styles.header}>
                 <img onClick={settingHandler}  className={Styles.threeline} src={line}></img>
@@ -109,7 +124,7 @@ const EditPlan = (event) => {
             </div>
 
             <div id='planParent' className={Styles.planParent}>
-                <Plans RemovePlan={RemovePlan} EditPlan={EditPlan} state={planstate} setstate={setplan}></Plans>
+                <Plans RemovePlan={RemovePlan} checkplan={checkplan} EditPlan={EditPlan} state={planstate} setstate={setplan}></Plans>
             </div>
 
             <div id='inputParent' className={Styles.inputParent}>

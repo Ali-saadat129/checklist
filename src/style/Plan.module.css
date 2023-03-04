@@ -14,6 +14,7 @@
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
     word-wrap: break-word;
+    
 
 }
 .text {
@@ -27,13 +28,32 @@
 .plan div  .Trash , .plan div  .Edit{
     width: 1.2rem;
     height: 1.2rem;
+    visibility: hidden;
+    cursor: pointer;
+    visibility: hidden ;
+
+}
+@keyframes showbutton {
+    0%{
+        visibility: hidden;
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+        visibility: visible;
+    }
+}
+.plan:hover div  .Trash , .plan:hover div  .Edit{
+    animation: showbutton forwards 1s;
+    -webkit-animation: showbutton forwards 1s;
 }
 .plan div  .Trash {
     width: 1.3rem;
     height: 1.3rem;   
 }
-
-
+.inputDo {
+    background-color: blue;
+}
 /*  -------- responsive ----------------- */
 @media only screen and (max-width: 768px) {
     .plan .text {

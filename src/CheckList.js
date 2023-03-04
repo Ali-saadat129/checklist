@@ -7,9 +7,12 @@ import Style from "./style/Checklist.module.css"
 import Main from "./components/Main"
 
 const CheckList = () => {
+
+
+
     return (
         <div className={Style.container}>
-            <Main />
+            <Main  />
         </div>
     );
 };

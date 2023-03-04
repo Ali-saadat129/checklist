@@ -9,7 +9,7 @@ import Styles from "../style/Setting.module.css"
 // close setting page function 
 
 
-const Setting = ({ all ,close}) => {
+const Setting = ({ all ,close ,plando}) => {
     return (
         <div >
             <div className={Styles.container}>
@@ -39,7 +39,7 @@ const Setting = ({ all ,close}) => {
                             <p className={Styles.count}>برنامه های امروز</p>
                         </div>
                         <div>
-                            <p className={Styles.Statistics}>0</p>
+                            <p className={Styles.Statistics}>{plando}</p>
                             <p className={Styles.count}> انجام شده </p>
                         </div>
                     </div>
